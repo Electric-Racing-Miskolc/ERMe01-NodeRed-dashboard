@@ -2908,7 +2908,7 @@
         "className": "",
         "icon": "",
         "iconPosition": "left",
-        "payload": "{\"TSAC_ERROR\":{\"TSAC_ERROR\":-1},\"TSAC_WARNING\":{\"TSAC_WARNING\":-1}}",
+        "payload": "{\"AMS_Error\":{\"ErrorCode\":-1},\"AMS_Warning\":{\"WarningCode\":-1}}",
         "payloadType": "json",
         "topic": "tserrorwarningreset",
         "topicType": "msg",
