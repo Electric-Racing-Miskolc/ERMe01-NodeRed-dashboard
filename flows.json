@@ -661,14 +661,12 @@
             "53b01e8a3798c8a7",
             "78ca6835633a1513",
             "cfc7b10295d34f30",
-            "e1d22b75230bf2d8",
-            "78279a38104a35ef",
-            "41c3b4375639627d"
+            "e1d22b75230bf2d8"
         ],
         "x": 1174,
         "y": 119,
-        "w": 432,
-        "h": 282
+        "w": 312,
+        "h": 222
     },
     {
         "id": "438f6b61f29a1657",
@@ -1732,7 +1730,7 @@
         "name": "spacer",
         "order": 2,
         "width": 1,
-        "height": 3,
+        "height": 6,
         "className": ""
     },
     {
@@ -2908,7 +2906,7 @@
         "className": "",
         "icon": "",
         "iconPosition": "left",
-        "payload": "{\"TSAC_ERROR\":{\"TSAC_ERROR\":-1},\"TSAC_WARNING\":{\"TSAC_WARNING\":-1}}",
+        "payload": "{\"AMS_Error\":{\"ErrorCode\":-1},\"AMS_Warning\":{\"WarningCode\":-1}}",
         "payloadType": "json",
         "topic": "tserrorwarningreset",
         "topicType": "msg",
@@ -9403,8 +9401,7 @@
                 "53b01e8a3798c8a7",
                 "78ca6835633a1513",
                 "e1d22b75230bf2d8",
-                "cfc7b10295d34f30",
-                "41c3b4375639627d"
+                "cfc7b10295d34f30"
             ]
         ]
     },
@@ -9470,11 +9467,11 @@
         "g": "e1d8e80501ed0ba7",
         "name": "SuspensionRL",
         "group": "474ddb1c53d8a25c",
-        "order": 5,
+        "order": 4,
         "value": "msg.payload.RSU_Data.LSuspension",
         "valueType": "jsonata",
         "width": 1,
-        "height": 5,
+        "height": 3,
         "gtype": "gauge-half",
         "gstyle": "needle",
         "title": "RL suspension",
@@ -9513,7 +9510,7 @@
         "styleGlow": false,
         "className": "",
         "x": 1380,
-        "y": 320,
+        "y": 260,
         "wires": [
             []
         ]
@@ -9525,11 +9522,11 @@
         "g": "e1d8e80501ed0ba7",
         "name": "SuspensionRR",
         "group": "474ddb1c53d8a25c",
-        "order": 6,
+        "order": 5,
         "value": "msg.payload.RSU_Data.RSuspension",
         "valueType": "jsonata",
         "width": 1,
-        "height": 5,
+        "height": 3,
         "gtype": "gauge-half",
         "gstyle": "needle",
         "title": "RR suspension",
@@ -9568,7 +9565,7 @@
         "styleGlow": false,
         "className": "",
         "x": 1380,
-        "y": 360,
+        "y": 300,
         "wires": [
             []
         ]
@@ -9584,7 +9581,7 @@
         "value": "msg.payload.FSU_Data.RSuspension",
         "valueType": "jsonata",
         "width": 1,
-        "height": 5,
+        "height": 3,
         "gtype": "gauge-half",
         "gstyle": "needle",
         "title": "FR suspension",
@@ -9639,7 +9636,7 @@
         "value": "msg.payload.FSU_Data.LSuspension",
         "valueType": "jsonata",
         "width": 1,
-        "height": 5,
+        "height": 3,
         "gtype": "gauge-half",
         "gstyle": "needle",
         "title": "FL suspension",
@@ -9681,82 +9678,6 @@
         "y": 160,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "78279a38104a35ef",
-        "type": "ui-gauge",
-        "z": "7dade78592428d89",
-        "g": "e1d8e80501ed0ba7",
-        "name": "Avg susp",
-        "group": "474ddb1c53d8a25c",
-        "order": 4,
-        "value": "payload.average",
-        "valueType": "msg",
-        "width": 1,
-        "height": 5,
-        "gtype": "gauge-half",
-        "gstyle": "needle",
-        "title": "Average suspension length",
-        "alwaysShowTitle": false,
-        "floatingTitlePosition": "top-left",
-        "units": "mm",
-        "icon": "",
-        "prefix": "",
-        "suffix": "",
-        "segments": [
-            {
-                "from": "0",
-                "color": "#5cd65c",
-                "text": "",
-                "textType": "label"
-            },
-            {
-                "from": "2000",
-                "color": "#ffc800",
-                "text": "",
-                "textType": "label"
-            },
-            {
-                "from": "3000",
-                "color": "#ea5353",
-                "text": "",
-                "textType": "label"
-            }
-        ],
-        "min": 0,
-        "max": "4100",
-        "sizeThickness": 16,
-        "sizeGap": 4,
-        "sizeKeyThickness": 8,
-        "styleRounded": true,
-        "styleGlow": false,
-        "className": "",
-        "x": 1520,
-        "y": 260,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "41c3b4375639627d",
-        "type": "function",
-        "z": "7dade78592428d89",
-        "g": "e1d8e80501ed0ba7",
-        "name": "function 1",
-        "func": "// 1. Initialize the stored values in context if they don't exist yet\nconst storedValues = context.get('storedValues') || {\n    FL: null,\n    FR: null,\n    RL: null,\n    RR: null\n};\n\n// 2. Update stored values with whatever comes in the current message\n// Using optional chaining (?.) to prevent crashes if FSU_data or RSU_data is missing\nif (msg.payload && typeof msg.payload === 'object') {\n    if (msg.payload.FSU_data?.LSuspension !== undefined) storedValues.FL = msg.payload.FSU_data.LSuspension;\n    if (msg.payload.FSU_data?.RSuspension !== undefined) storedValues.FR = msg.payload.FSU_data.RSuspension;\n    if (msg.payload.RSU_data?.LSuspension !== undefined) storedValues.RL = msg.payload.RSU_data.LSuspension;\n    if (msg.payload.RSU_data?.RSuspension !== undefined) storedValues.RR = msg.payload.RSU_data.RSuspension;\n}\n\n// 3. Save the updated values back to the node's context\ncontext.set('storedValues', storedValues);\n\n// 4. Extract the valid numeric values to calculate the average\nconst validValues = Object.values(storedValues).filter(v => v !== null && typeof v === 'number');\n\n// 5. Calculate average only if we have at least one value\nif (validValues.length > 0) {\n    const sum = validValues.reduce((acc, curr) => acc + curr, 0);\n    const average = sum / validValues.length;\n\n    // Output the average and how many active sensors contributed to it\n    msg.payload = {\n        average: Number(average.toFixed(2)), // Rounds to 2 decimal places\n        activeCount: validValues.length,\n        currentValues: storedValues\n    };\n    return msg;\n}\n\n// If no data has been received yet, do nothing\nreturn null;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1360,
-        "y": 260,
-        "wires": [
-            [
-                "78279a38104a35ef"
-            ]
         ]
     },
     {
