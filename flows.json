@@ -1929,10 +1929,10 @@
         "id": "e44be330d8fd3dc9",
         "type": "ui-gauge",
         "z": "f595383a0843f950",
-        "name": "msg.payload.AMS_Stat.MaxTemp",
+        "name": "max_cell_temp",
         "group": "25cb88409ba9fd0d",
         "order": 5,
-        "value": "msg.payload.TSAC_STAT.TSAC_STAT_MAX_TEMP",
+        "value": "msg.payload.AMS_Stat.MaxTemp",
         "valueType": "jsonata",
         "width": 1,
         "height": 2,
@@ -1973,7 +1973,7 @@
         "styleRounded": true,
         "styleGlow": false,
         "className": "",
-        "x": 800,
+        "x": 740,
         "y": 340,
         "wires": [
             []
