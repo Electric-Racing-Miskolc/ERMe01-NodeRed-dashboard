@@ -256,7 +256,11 @@
             "9e17aa5750172dbe",
             "0a70b26b66a04142",
             "28f1a4d2ab466f9a",
-            "b474a3d2f00b5523"
+            "b474a3d2f00b5523",
+            "4863f55f879d8bb1",
+            "1aa3c6a973c5960a",
+            "8fd2ba086fa9f404",
+            "5eface9477b57d92"
         ],
         "x": 34,
         "y": 1599,
@@ -904,7 +908,7 @@
                 "cols": "12"
             }
         ],
-        "order": 2,
+        "order": 1,
         "className": "",
         "visible": true,
         "disabled": false
@@ -1001,7 +1005,7 @@
                 "cols": "12"
             }
         ],
-        "order": 3,
+        "order": 2,
         "className": "",
         "visible": "true",
         "disabled": "false"
@@ -1251,7 +1255,7 @@
                 "cols": "12"
             }
         ],
-        "order": 1,
+        "order": 3,
         "className": "",
         "visible": true,
         "disabled": false
@@ -8664,6 +8668,156 @@
         "wires": [
             [
                 "b03d730786d02fd8"
+            ]
+        ]
+    },
+    {
+        "id": "4863f55f879d8bb1",
+        "type": "ui-button",
+        "z": "58531eb4c616092e",
+        "g": "2aeb3d9d9334a3f0",
+        "group": "68696373afd855b2",
+        "name": "REQUP OFF",
+        "label": "REQUP OFF",
+        "order": 19,
+        "width": 1,
+        "height": 0,
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "1",
+        "payloadType": "num",
+        "topic": "0",
+        "topicType": "str",
+        "buttonColor": "red",
+        "textColor": "white",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 370,
+        "y": 1780,
+        "wires": [
+            [
+                "1aa3c6a973c5960a"
+            ]
+        ]
+    },
+    {
+        "id": "1aa3c6a973c5960a",
+        "type": "change",
+        "z": "58531eb4c616092e",
+        "g": "2aeb3d9d9334a3f0",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "send.MPCU_ModifySettingsReq.Index",
+                "pt": "msg",
+                "to": "13",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "send.MPCU_ModifySettingsReq.Value",
+                "pt": "msg",
+                "to": "0",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 1780,
+        "wires": [
+            [
+                "28f1a4d2ab466f9a"
+            ]
+        ]
+    },
+    {
+        "id": "8fd2ba086fa9f404",
+        "type": "ui-button",
+        "z": "58531eb4c616092e",
+        "g": "2aeb3d9d9334a3f0",
+        "group": "68696373afd855b2",
+        "name": "REQUP ON",
+        "label": "REQUP ON",
+        "order": 20,
+        "width": 1,
+        "height": 0,
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "1",
+        "payloadType": "num",
+        "topic": "0",
+        "topicType": "str",
+        "buttonColor": "green",
+        "textColor": "white",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 370,
+        "y": 1840,
+        "wires": [
+            [
+                "5eface9477b57d92"
+            ]
+        ]
+    },
+    {
+        "id": "5eface9477b57d92",
+        "type": "change",
+        "z": "58531eb4c616092e",
+        "g": "2aeb3d9d9334a3f0",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "send.MPCU_ModifySettingsReq.Index",
+                "pt": "msg",
+                "to": "13",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "send.MPCU_ModifySettingsReq.Value",
+                "pt": "msg",
+                "to": "1",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 1840,
+        "wires": [
+            [
+                "28f1a4d2ab466f9a"
             ]
         ]
     },
