@@ -1,5 +1,13 @@
 [
     {
+        "id": "7e000ad6f12ce22c",
+        "type": "tab",
+        "label": "Overview",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "f595383a0843f950",
         "type": "tab",
         "label": "AMS Flow",
@@ -556,7 +564,9 @@
             "93a47c3b064a5416",
             "ae3d7749a17db048",
             "d9d9ffde073f1ef0",
-            "48be586843559217"
+            "48be586843559217",
+            "a9aaadc8903a28b3",
+            "42c18733e7124eb5"
         ],
         "x": 1254,
         "y": 159,
@@ -825,6 +835,121 @@
         "y": 79.00003051757812,
         "w": 1012,
         "h": 809.5
+    },
+    {
+        "id": "c4e217836e9d2f32",
+        "type": "group",
+        "z": "7e000ad6f12ce22c",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "ad373fa587728bbe",
+            "aa24709efa142dcd",
+            "18233a0c255003c8",
+            "3b7bca7599bafb24",
+            "b0417e8f294f9ad7",
+            "4ce832cc5e27a6b6",
+            "bfe04f05d0cc2c45"
+        ],
+        "x": 1574,
+        "y": 999,
+        "w": 252,
+        "h": 342
+    },
+    {
+        "id": "eecc517b3884a29f",
+        "type": "group",
+        "z": "7e000ad6f12ce22c",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "b00a3ea4eaeeb7a6",
+            "4ef25351ac5f9eaa",
+            "5f668bcca367a1fe",
+            "bcc8c33b2267aa42",
+            "e6f10f45c66d29c8",
+            "d59c1de8ea2243a3",
+            "9fa53ce9a21255c5"
+        ],
+        "x": 1354,
+        "y": 439,
+        "w": 652,
+        "h": 342
+    },
+    {
+        "id": "bfd7b7033d65b775",
+        "type": "group",
+        "z": "7e000ad6f12ce22c",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "2f81e1436fa34e1e",
+            "c4bea10abea424dd",
+            "b197bd0619dd0857",
+            "069ca89a30ce3b23",
+            "8e5e49c5b7cd1fcb",
+            "1871e3e1b4255db7",
+            "f4f3dfdd641b01a3",
+            "155ae2b57fc7548f",
+            "147410c563eec0c2",
+            "62d2bcbc5197cc8f",
+            "5c45b642eef8ee98",
+            "4d1f5fc472a1f43f"
+        ],
+        "x": 674,
+        "y": 959,
+        "w": 712,
+        "h": 442
+    },
+    {
+        "id": "68066337a5072fdb",
+        "type": "group",
+        "z": "7e000ad6f12ce22c",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "71b6a52e75a3b6fa",
+            "a88a7a6690f04795",
+            "45c1a8c5cc15f0e4",
+            "e1ce923696a40ee3",
+            "3c6e149892e3cc22",
+            "23c9e5c85b6c6c8f",
+            "8b50bac3bc87d99a",
+            "5617430bb17a65dc",
+            "d95b234aef3fe611"
+        ],
+        "x": 554,
+        "y": 319,
+        "w": 632,
+        "h": 482
     },
     {
         "id": "a1947a9da86cce22",
@@ -1887,6 +2012,2275 @@
         "className": "",
         "visible": "true",
         "disabled": "false"
+    },
+    {
+        "id": "43b1e779af6b2266",
+        "type": "ui-group",
+        "name": "TSAC",
+        "page": "492c8350da5818ea",
+        "width": 6,
+        "height": 1,
+        "order": 4,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "60da1b66bf91580b",
+        "type": "ui-group",
+        "name": "MPCU",
+        "page": "492c8350da5818ea",
+        "width": 6,
+        "height": 1,
+        "order": 5,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "7bdd9ae6152d0ad2",
+        "type": "ui-group",
+        "name": "Cooling",
+        "page": "492c8350da5818ea",
+        "width": 12,
+        "height": 1,
+        "order": 3,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "fb4bf6bf86c88870",
+        "type": "ui-group",
+        "name": "Dynamics",
+        "page": "492c8350da5818ea",
+        "width": 12,
+        "height": 1,
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "0bfbb9d8fcf79d24",
+        "type": "ui-spacer",
+        "group": "43b1e779af6b2266",
+        "name": "spacer",
+        "order": 8,
+        "width": 4,
+        "height": 2,
+        "className": ""
+    },
+    {
+        "id": "0bfc491e55b3df46",
+        "type": "ui-spacer",
+        "group": "fb4bf6bf86c88870",
+        "name": "spacer",
+        "order": 6,
+        "width": 6,
+        "height": 1,
+        "className": ""
+    },
+    {
+        "id": "ba819955890d188d",
+        "type": "ui-group",
+        "name": "Connection status",
+        "page": "492c8350da5818ea",
+        "width": 12,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "db7ef6a4d5e979d5",
+        "type": "link in",
+        "z": "7e000ad6f12ce22c",
+        "name": "Telemetry bundle",
+        "links": [
+            "716a6a93e626f246"
+        ],
+        "x": 115,
+        "y": 740,
+        "wires": [
+            [
+                "3dde70e9357d1859"
+            ]
+        ]
+    },
+    {
+        "id": "3dde70e9357d1859",
+        "type": "function",
+        "z": "7e000ad6f12ce22c",
+        "name": "Fan-out Overview",
+        "func": "// ===================== Fan-out Overview — On Message =====================\n// false: msg.payload = { Msg: { Signal: value } }  -> gauges copied from other pages\n//        keep their expressions (msg.payload.AMS_Stat.SumVoltage) unchanged.\n// true:  msg.payload = value                       -> widgets use \"msg.payload\".\n// Derived values (overall_reduction, Steering angle) are ALWAYS sent flat:\n// those two widgets must use \"msg.payload\".\nconst FLAT = false;\n\nconst OUT = [\n    // --- TSAC group ---\n    \"AMS_Stat.SumVoltage\",                    // 1  sum_cell_voltage\n    \"AMS_Stat.UnbalancedRate\",                // 2  unbalanced rate\n    \"AMS_Stat.Soc\",                           // 3  battery SOC\n    {\n        derived: \"OverallReduction\",            // 4  overall_reduction: worst of the three rates\n        deps: [\"AMS_Stat.ThermalReductionRate\", \"AMS_Stat.VoltageReductionRate\",\n            \"AMS_Stat.UnbalancedReductionRate\"],\n        fn: g => Math.min(g(\"AMS_Stat.ThermalReductionRate\"),\n            g(\"AMS_Stat.VoltageReductionRate\"),\n            g(\"AMS_Stat.UnbalancedReductionRate\"))\n    },\n    \"AMS_Stat.TsState\",                       // 5  ts_state\n    \"AMS_Stat.BenderState\",                   // 6  bender_state\n    \"AMS_Error.ErrorCode\",                    // 7  ts_error      (-1 = no error)\n    \"AMS_Warning.WarningCode\",                // 8  ts_warning    (-1 = no warning)\n\n    // --- MPCU group ---\n    \"MPCU_VehicleState.VehicleState\",         // 9  Vehicle state\n    \"MPCU_Settings.PowerLimiter\",             // 10 Power limiter\n    \"MPCU_Settings.MaxMotorRpm\",              // 11 Max Motor RPM\n    \"AMS_Stat.KsVoltage\",                     // 12 SDC_voltage\n    \"MPCU_Error.ErrorCode\",                   // 13 MPCU_error     <- check this name\n    \"MPCU_Warning.WarningCode\",               // 14 MPCU_warning\n\n    // --- Tractive system group ---\n    \"AMS_Stat.IsaPower\",                      // 15 isa_power\n    \"MPCU_Values.BusVoltage\",                 // 16 HV Voltage-Inv\n    \"AMS_AvailableCurrent.MaxDischargePower\", // 17 discharge_power_limit\n    \"AMS_AvailableCurrent.MaxChargePower\",    // 18 charge_power_limit\n    \"MPCU_Values.SpeedKmph\",                  // 19 Speed\n    \"APPS_NormalData.AppsData\",               // 20 -> \"set msg.payload\" change node -> APPS\n    \"RSU_Bps.Pressure\",                       // 21 Brake Pressure\n    {\n        derived: \"SteeringDeg\",                 // 22 Steering angle, scaled like the range node\n        deps: [\"FSU_Data.SteeringAngle\"],\n        fn: g => Math.round((g(\"FSU_Data.SteeringAngle\") - 420) / (1670 - 420) * 180 - 90)\n    },\n\n    // --- Cooling / temperature group ---\n    \"MPCU_Values.Fan1Speed\",                  // 23 FAN M1\n    \"MPCU_Values.Fan3Speed\",                  // 24 FAN I\n    \"MPCU_Values.MotorPumpSpeed\",             // 25 PUMP M\n    \"MPCU_Values.InverterPumpSpeed\",          // 26 PUMP I\n    \"AMS_Stat.MaxTemp\",                       // 27 max_cell_temp\n    \"MPCU_Values.InverterTemperature\",        // 28 Inverter Temperature\n    \"MPCU_Values.MotorTemperature\",           // 29 Motor Temperature\n];\n\n// ------------------------------------------------------------------------\nconst b = msg.payload || {};\n\n// derived values need the last-known value of every input, not only the changed ones\nconst last = context.get(\"last\") || {};\nObject.assign(last, b);\ncontext.set(\"last\", last);\nconst g = p => last[p];\n\nconst prev = context.get(\"prevDerived\") || {};\n\nfunction make(topic, value, flat) {\n    let payload = value;\n    if (!flat && !FLAT && topic.includes(\".\")) {\n        const [m, sig] = topic.split(\".\");\n        payload = { [m]: { [sig]: value } };\n    }\n    return { topic, payload, timestamp: msg.timestamp };\n}\n\nconst out = OUT.map(e => {\n    if (typeof e === \"string\") {\n        return (e in b) ? make(e, b[e]) : null;\n    }\n    if (!e.deps.some(d => d in b)) return null;                  // no input changed\n    if (e.deps.some(d => typeof g(d) !== \"number\")) return null; // an input never arrived\n    const v = e.fn(g);\n    if (!Number.isFinite(v) || v === prev[e.derived]) return null;\n    prev[e.derived] = v;\n    return make(e.derived, v, true);                             // derived: always flat\n});\n\ncontext.set(\"prevDerived\", prev);\nreturn out;",
+        "outputs": 29,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 740,
+        "wires": [
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            []
+        ],
+        "outputLabels": [
+            "AMS_Stat.MinTemp",
+            "AMS_Stat.AvgTemp",
+            "AMS_Stat.MaxTemp",
+            "AMS_Stat.MinVoltage",
+            "AMS_Stat.AvgVoltage",
+            "AMS_Stat.MaxVoltage",
+            "AMS_Stat.SumVoltage",
+            "AMS_Stat.IsaVoltage",
+            "AMS_Stat.IsaCurrent",
+            "AMS_AvailableCurrent.MaxDischargeCurrent",
+            "AMS_AvailableCurrent.MaxChargeCurrent",
+            "AMS_Stat.ThermalReductionRate",
+            "AMS_Stat.VoltageReductionRate",
+            "AMS_Stat.UnbalancedReductionRate",
+            "AMS_Stat.TsState",
+            "AMS_Stat.BalancingState",
+            "AMS_Stat.BenderState",
+            "AMS_Stat.BeingDischarged",
+            "AMS_Stat.UnbalancedRate",
+            "AMS_Stat.KsVoltage",
+            "received AMS_Stat",
+            "AMS_Stat.Soc",
+            "AMS_Stat.IsaPower",
+            "AMS_Error.ErrorCode",
+            "AMS_Warning.WarningCode",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "id": "ad373fa587728bbe",
+        "type": "ui-gauge",
+        "z": "7e000ad6f12ce22c",
+        "g": "c4e217836e9d2f32",
+        "name": "max_cell_temp",
+        "group": "7bdd9ae6152d0ad2",
+        "order": 2,
+        "value": "msg.payload.AMS_Stat.MaxTemp",
+        "valueType": "jsonata",
+        "width": 2,
+        "height": 4,
+        "gtype": "gauge-half",
+        "gstyle": "rounded",
+        "title": "Max Cell Temp",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "",
+        "icon": "temperature-celsius",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "40",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "50",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "70",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 1680,
+        "y": 1220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "71b6a52e75a3b6fa",
+        "type": "ui-gauge",
+        "z": "7e000ad6f12ce22c",
+        "g": "68066337a5072fdb",
+        "name": "battery SOC",
+        "group": "43b1e779af6b2266",
+        "order": 4,
+        "value": "msg.payload.AMS_Stat.Soc",
+        "valueType": "jsonata",
+        "width": 1,
+        "height": 11,
+        "gtype": "gauge-battery",
+        "gstyle": "rounded",
+        "title": "SOC",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "V",
+        "icon": "battery",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "10",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "20",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": "0",
+        "max": "100",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 730,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2f81e1436fa34e1e",
+        "type": "ui-gauge",
+        "z": "7e000ad6f12ce22c",
+        "g": "bfd7b7033d65b775",
+        "name": "isa_power",
+        "group": "fb4bf6bf86c88870",
+        "order": 8,
+        "value": "msg.payload.AMS_Stat.IsaPower",
+        "valueType": "jsonata",
+        "width": 2,
+        "height": 4,
+        "gtype": "gauge-half",
+        "gstyle": "rounded",
+        "title": "TSAC power",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "W",
+        "icon": "power-plug",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "65000",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "75000",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": "0",
+        "max": "90000",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 1010,
+        "y": 1000,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a88a7a6690f04795",
+        "type": "ui-gauge",
+        "z": "7e000ad6f12ce22c",
+        "g": "68066337a5072fdb",
+        "name": "ts_state",
+        "group": "43b1e779af6b2266",
+        "order": 1,
+        "value": "msg.payload.AMS_Stat.TsState",
+        "valueType": "jsonata",
+        "width": 2,
+        "height": 2,
+        "gtype": "gauge-tile",
+        "gstyle": "needle",
+        "title": "TS STATE",
+        "alwaysShowTitle": true,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "TS OFF",
+                "textType": "str"
+            },
+            {
+                "from": "1",
+                "color": "#ffc800",
+                "text": "TS PRECHARGE",
+                "textType": "str"
+            },
+            {
+                "from": "2",
+                "color": "#ff8000",
+                "text": "TS ON",
+                "textType": "str"
+            },
+            {
+                "from": "3",
+                "color": "#ea5353",
+                "text": "TSERROR",
+                "textType": "str"
+            }
+        ],
+        "min": 0,
+        "max": 10,
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 720,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "45c1a8c5cc15f0e4",
+        "type": "ui-gauge",
+        "z": "7e000ad6f12ce22c",
+        "g": "68066337a5072fdb",
+        "name": "bender_state",
+        "group": "43b1e779af6b2266",
+        "order": 5,
+        "value": "msg.payload.AMS_Stat.BenderState",
+        "valueType": "jsonata",
+        "width": 2,
+        "height": 2,
+        "gtype": "gauge-tile",
+        "gstyle": "needle",
+        "title": "Bender State",
+        "alwaysShowTitle": true,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#ea5353",
+                "text": "IMD OFF OR SHORT",
+                "textType": "str"
+            },
+            {
+                "from": "1",
+                "color": "#5cd65c",
+                "text": "NORMAL",
+                "textType": "str"
+            },
+            {
+                "from": "2",
+                "color": "#ff8000",
+                "text": "UNDERVOLTAGE",
+                "textType": "str"
+            },
+            {
+                "from": "3",
+                "color": "#5cd65c",
+                "text": "SPEED START MEASUREMENT",
+                "textType": "str"
+            },
+            {
+                "from": "4",
+                "color": "#ea5353",
+                "text": "DEVICE ERROR",
+                "textType": "str"
+            },
+            {
+                "from": "5",
+                "color": "#ea5353",
+                "text": "CONNECTION FAULT",
+                "textType": "str"
+            },
+            {
+                "from": "6",
+                "color": "#ea5353",
+                "text": "HARD ERROR",
+                "textType": "str"
+            }
+        ],
+        "min": 0,
+        "max": 10,
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 730,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e1ce923696a40ee3",
+        "type": "ui-gauge",
+        "z": "7e000ad6f12ce22c",
+        "g": "68066337a5072fdb",
+        "name": "unbalanced rate",
+        "group": "43b1e779af6b2266",
+        "order": 10,
+        "value": "msg.payload.AMS_Stat.UnbalancedRate",
+        "valueType": "jsonata",
+        "width": 2,
+        "height": 5,
+        "gtype": "gauge-half",
+        "gstyle": "rounded",
+        "title": "Unbalanced rate",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "%",
+        "icon": "battery-unknown",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "5",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "10",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "15",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 740,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3c6e149892e3cc22",
+        "type": "ui-gauge",
+        "z": "7e000ad6f12ce22c",
+        "g": "68066337a5072fdb",
+        "name": "sum_cell_voltage",
+        "group": "43b1e779af6b2266",
+        "order": 9,
+        "value": "msg.payload.AMS_Stat.SumVoltage",
+        "valueType": "jsonata",
+        "width": 2,
+        "height": 5,
+        "gtype": "gauge-half",
+        "gstyle": "rounded",
+        "title": "Battery pack voltage",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "V",
+        "icon": "flash-triangle",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "300",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "360",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "390",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "463",
+                "color": "#d65c5c",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": "300",
+        "max": "500",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 750,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c4bea10abea424dd",
+        "type": "ui-gauge",
+        "z": "7e000ad6f12ce22c",
+        "g": "bfd7b7033d65b775",
+        "name": "discharge_power_limit",
+        "group": "fb4bf6bf86c88870",
+        "order": 9,
+        "value": "msg.payload.AMS_AvailableCurrent.MaxDischargePower",
+        "valueType": "jsonata",
+        "width": 2,
+        "height": 4,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Discharge power limit",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "W",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#0040ff",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "80000",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 1040,
+        "y": 1080,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "aa24709efa142dcd",
+        "type": "ui-gauge",
+        "z": "7e000ad6f12ce22c",
+        "g": "c4e217836e9d2f32",
+        "name": "FAN M1",
+        "group": "7bdd9ae6152d0ad2",
+        "order": 4,
+        "value": "msg.payload.MPCU_Values.Fan1Speed",
+        "valueType": "jsonata",
+        "width": 2,
+        "height": 4,
+        "gtype": "gauge-half",
+        "gstyle": "rounded",
+        "title": "FAN M1",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "%",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "70",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "80",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 1660,
+        "y": 1040,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "18233a0c255003c8",
+        "type": "ui-gauge",
+        "z": "7e000ad6f12ce22c",
+        "g": "c4e217836e9d2f32",
+        "name": "FAN I",
+        "group": "7bdd9ae6152d0ad2",
+        "order": 6,
+        "value": "msg.payload.MPCU_Values.Fan3Speed",
+        "valueType": "jsonata",
+        "width": 2,
+        "height": 4,
+        "gtype": "gauge-half",
+        "gstyle": "rounded",
+        "title": "FAN I",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "%",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "70",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "80",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 1650,
+        "y": 1080,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3b7bca7599bafb24",
+        "type": "ui-gauge",
+        "z": "7e000ad6f12ce22c",
+        "g": "c4e217836e9d2f32",
+        "name": "PUMP M",
+        "group": "7bdd9ae6152d0ad2",
+        "order": 5,
+        "value": "msg.payload.MPCU_Values.MotorPumpSpeed",
+        "valueType": "jsonata",
+        "width": 1,
+        "height": 4,
+        "gtype": "gauge-half",
+        "gstyle": "rounded",
+        "title": "PUMP M",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "%",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "0.5",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "1",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 1660,
+        "y": 1120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b0417e8f294f9ad7",
+        "type": "ui-gauge",
+        "z": "7e000ad6f12ce22c",
+        "g": "c4e217836e9d2f32",
+        "name": "PUMP I",
+        "group": "7bdd9ae6152d0ad2",
+        "order": 7,
+        "value": "msg.payload.MPCU_Values.InverterPumpSpeed",
+        "valueType": "jsonata",
+        "width": 1,
+        "height": 4,
+        "gtype": "gauge-half",
+        "gstyle": "rounded",
+        "title": "PUMP I",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "%",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "0.5",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "1",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 1660,
+        "y": 1160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4ce832cc5e27a6b6",
+        "type": "ui-gauge",
+        "z": "7e000ad6f12ce22c",
+        "g": "c4e217836e9d2f32",
+        "name": "Inverter Temperature",
+        "group": "7bdd9ae6152d0ad2",
+        "order": 3,
+        "value": "msg.payload.MPCU_Values.InverterTemperature",
+        "valueType": "jsonata",
+        "width": 2,
+        "height": 4,
+        "gtype": "gauge-34",
+        "gstyle": "needle",
+        "title": "Inverter Temperature",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "",
+        "icon": "temperature-celsius",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "50",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "70",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "80",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 1700,
+        "y": 1260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bfe04f05d0cc2c45",
+        "type": "ui-gauge",
+        "z": "7e000ad6f12ce22c",
+        "g": "c4e217836e9d2f32",
+        "name": "Motor Temperature",
+        "group": "7bdd9ae6152d0ad2",
+        "order": 1,
+        "value": "msg.payload.MPCU_Values.MotorTemperature",
+        "valueType": "jsonata",
+        "width": 2,
+        "height": 4,
+        "gtype": "gauge-34",
+        "gstyle": "needle",
+        "title": "Motor Temperature",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "",
+        "icon": "temperature-celsius",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "80",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "100",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "120",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 1690,
+        "y": 1300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b197bd0619dd0857",
+        "type": "ui-gauge",
+        "z": "7e000ad6f12ce22c",
+        "g": "bfd7b7033d65b775",
+        "name": "Speed",
+        "group": "fb4bf6bf86c88870",
+        "order": 3,
+        "value": "msg.payload.MPCU_Values.SpeedKmph",
+        "valueType": "jsonata",
+        "width": 2,
+        "height": 5,
+        "gtype": "gauge-34",
+        "gstyle": "needle",
+        "title": "Speed",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "Km/h",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "100",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "130",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "150",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 990,
+        "y": 1180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "069ca89a30ce3b23",
+        "type": "ui-gauge",
+        "z": "7e000ad6f12ce22c",
+        "g": "bfd7b7033d65b775",
+        "name": "HV Voltage-Inv",
+        "group": "60da1b66bf91580b",
+        "order": 1,
+        "value": "msg.payload.MPCU_Values.BusVoltage",
+        "valueType": "jsonata",
+        "width": 1,
+        "height": 5,
+        "gtype": "gauge-34",
+        "gstyle": "needle",
+        "title": "Inverter HV Voltage ",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "V",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "300",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "360",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "390",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "463",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": "300",
+        "max": "500",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 1020,
+        "y": 1040,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "23c9e5c85b6c6c8f",
+        "type": "ui-gauge",
+        "z": "7e000ad6f12ce22c",
+        "g": "68066337a5072fdb",
+        "name": "overall_reduction",
+        "group": "43b1e779af6b2266",
+        "order": 12,
+        "value": "msg.payload.AMS_Stat.OverallReductionRate",
+        "valueType": "jsonata",
+        "width": 1,
+        "height": 4,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Overall Reduction",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "%",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#ff0000",
+                "text": "",
+                "textType": "none"
+            },
+            {
+                "from": "25",
+                "color": "#00ff00",
+                "text": "",
+                "textType": "none"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 750,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8e5e49c5b7cd1fcb",
+        "type": "change",
+        "z": "7e000ad6f12ce22c",
+        "g": "bfd7b7033d65b775",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$number(msg.payload.APPS_NormalData.AppsData)\t",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 860,
+        "y": 1220,
+        "wires": [
+            [
+                "1871e3e1b4255db7"
+            ]
+        ]
+    },
+    {
+        "id": "1871e3e1b4255db7",
+        "type": "ui-progress",
+        "z": "7e000ad6f12ce22c",
+        "g": "bfd7b7033d65b775",
+        "group": "fb4bf6bf86c88870",
+        "name": "",
+        "label": "APPS",
+        "order": 1,
+        "width": 6,
+        "height": 2,
+        "color": "red",
+        "className": "",
+        "x": 1070,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "f4f3dfdd641b01a3",
+        "type": "ui-gauge",
+        "z": "7e000ad6f12ce22c",
+        "g": "bfd7b7033d65b775",
+        "name": "Brake Pressure",
+        "group": "fb4bf6bf86c88870",
+        "order": 5,
+        "value": "msg.payload.RSU_Bps.Pressure",
+        "valueType": "jsonata",
+        "width": "2",
+        "height": 5,
+        "gtype": "gauge-34",
+        "gstyle": "needle",
+        "title": "BPS",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "bar",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "40",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "60",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 1060,
+        "y": 1260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "155ae2b57fc7548f",
+        "type": "ui-gauge",
+        "z": "7e000ad6f12ce22c",
+        "g": "bfd7b7033d65b775",
+        "name": "Steering angle",
+        "group": "fb4bf6bf86c88870",
+        "order": 4,
+        "value": "$floor(msg.payload.FSU_Data.SteeringAngle)\t",
+        "valueType": "jsonata",
+        "width": "2",
+        "height": 5,
+        "gtype": "gauge-34",
+        "gstyle": "needle",
+        "title": "Steering angle",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "-135",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": "-135",
+        "max": "135",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 1060,
+        "y": 1300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5617430bb17a65dc",
+        "type": "ui-gauge",
+        "z": "7e000ad6f12ce22c",
+        "g": "68066337a5072fdb",
+        "name": "ts_error",
+        "group": "43b1e779af6b2266",
+        "order": 2,
+        "value": "msg.payload.AMS_Error.ErrorCode + 1",
+        "valueType": "jsonata",
+        "width": 2,
+        "height": 2,
+        "gtype": "gauge-tile",
+        "gstyle": "needle",
+        "title": "Last TS Error",
+        "alwaysShowTitle": true,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "NO ERROR",
+                "textType": "str"
+            },
+            {
+                "from": "1",
+                "color": "#ea5353",
+                "text": "OVERVOLTAGE",
+                "textType": "str"
+            },
+            {
+                "from": "2",
+                "color": "#ea5353",
+                "text": "UNDERVOLTAGE",
+                "textType": "str"
+            },
+            {
+                "from": "3",
+                "color": "#ea5353",
+                "text": "OVERTEMPERATURE",
+                "textType": "str"
+            },
+            {
+                "from": "4",
+                "color": "#ea5353",
+                "text": "TEMP OPENWIRE",
+                "textType": "str"
+            },
+            {
+                "from": "5",
+                "color": "#ea5353",
+                "text": "CELL OPENWIRE",
+                "textType": "str"
+            },
+            {
+                "from": "6",
+                "color": "#ea5353",
+                "text": "VOLTAGE DIFFERENCE",
+                "textType": "str"
+            },
+            {
+                "from": "7",
+                "color": "#ea5353",
+                "text": "OVERTIME",
+                "textType": "str"
+            },
+            {
+                "from": "8",
+                "color": "#ea5353",
+                "text": "RELAY STUCK",
+                "textType": "str"
+            },
+            {
+                "from": "9",
+                "color": "#ea5353",
+                "text": "ISA OVERHEAT",
+                "textType": "str"
+            },
+            {
+                "from": "10",
+                "color": "#ea5353",
+                "text": "OVERCHARGE",
+                "textType": "str"
+            },
+            {
+                "from": "11",
+                "color": "#ea5353",
+                "text": "OVERDISCHARGE",
+                "textType": "str"
+            },
+            {
+                "from": "12",
+                "color": "#ea5353",
+                "text": "HARDWARE FAILURE",
+                "textType": "str"
+            },
+            {
+                "from": "13",
+                "color": "#ea5353",
+                "text": "PRECHARGE TIMEOUT",
+                "textType": "str"
+            },
+            {
+                "from": "14",
+                "color": "#ea5353",
+                "text": "ISA TIMEOUT",
+                "textType": "str"
+            },
+            {
+                "from": "15",
+                "color": "#ea5353",
+                "text": "MPCU TIMEOUT",
+                "textType": "str"
+            },
+            {
+                "from": "16",
+                "color": "#ea5353",
+                "text": "HV ON",
+                "textType": "str"
+            },
+            {
+                "from": "17",
+                "color": "#ea5353",
+                "text": "LEAK",
+                "textType": "str"
+            },
+            {
+                "from": "18",
+                "color": "#ea5353",
+                "text": "AIR OPENED",
+                "textType": "str"
+            }
+        ],
+        "min": 0,
+        "max": "18",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 1080,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8b50bac3bc87d99a",
+        "type": "ui-button",
+        "z": "7e000ad6f12ce22c",
+        "g": "68066337a5072fdb",
+        "group": "43b1e779af6b2266",
+        "name": "",
+        "label": "Reset error and warning",
+        "order": 3,
+        "width": 1,
+        "height": 2,
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "{\"AMS_Error\":{\"ErrorCode\":-1},\"AMS_Warning\":{\"WarningCode\":-1}}",
+        "payloadType": "json",
+        "topic": "tserrorwarningreset",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 690,
+        "y": 740,
+        "wires": [
+            [
+                "5617430bb17a65dc",
+                "d95b234aef3fe611"
+            ]
+        ]
+    },
+    {
+        "id": "d95b234aef3fe611",
+        "type": "ui-gauge",
+        "z": "7e000ad6f12ce22c",
+        "g": "68066337a5072fdb",
+        "name": "ts_warning",
+        "group": "43b1e779af6b2266",
+        "order": 6,
+        "value": "msg.payload.AMS_Warning.WarningCode + 1",
+        "valueType": "jsonata",
+        "width": 2,
+        "height": 2,
+        "gtype": "gauge-tile",
+        "gstyle": "needle",
+        "title": "Last TS Warning",
+        "alwaysShowTitle": true,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "NO WARNING",
+                "textType": "str"
+            },
+            {
+                "from": "1",
+                "color": "#ffc800",
+                "text": "OVERVOLTAGE",
+                "textType": "str"
+            },
+            {
+                "from": "2",
+                "color": "#ffc800",
+                "text": "UNDERVOLTAGE",
+                "textType": "str"
+            },
+            {
+                "from": "3",
+                "color": "#ffc800",
+                "text": "OVERTEMPERATURE",
+                "textType": "str"
+            },
+            {
+                "from": "4",
+                "color": "#ffc800",
+                "text": "TEMP OPENWIRE",
+                "textType": "str"
+            },
+            {
+                "from": "5",
+                "color": "#ffc800",
+                "text": "CELL OPENWIRE",
+                "textType": "str"
+            },
+            {
+                "from": "6",
+                "color": "#ffc800",
+                "text": "VOLTAGE DIFFERENCE",
+                "textType": "str"
+            },
+            {
+                "from": "7",
+                "color": "#ffc800",
+                "text": "STATE CONTROL",
+                "textType": "str"
+            },
+            {
+                "from": "8",
+                "color": "#ffc800",
+                "text": "STARTUP",
+                "textType": "str"
+            },
+            {
+                "from": "9",
+                "color": "#ffc800",
+                "text": "SDC OPENED",
+                "textType": "str"
+            },
+            {
+                "from": "10",
+                "color": "#ffc800",
+                "text": "RELAY STUCK DURING ERROR",
+                "textType": "str"
+            },
+            {
+                "from": "11",
+                "color": "#ffc800",
+                "text": "OVERCHARGE",
+                "textType": "str"
+            },
+            {
+                "from": "12",
+                "color": "#ffc800",
+                "text": "OVERDISCHARGE",
+                "textType": "str"
+            },
+            {
+                "from": "13",
+                "color": "#ffc800",
+                "text": "HV ON",
+                "textType": "str"
+            },
+            {
+                "from": "14",
+                "color": "#ffc800",
+                "text": "BENDER",
+                "textType": "str"
+            }
+        ],
+        "min": 0,
+        "max": "14",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 1090,
+        "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "147410c563eec0c2",
+        "type": "ui-gauge",
+        "z": "7e000ad6f12ce22c",
+        "g": "bfd7b7033d65b775",
+        "name": "charge_power_limit",
+        "group": "fb4bf6bf86c88870",
+        "order": 7,
+        "value": "msg.payload.AMS_AvailableCurrent.MaxChargePower",
+        "valueType": "jsonata",
+        "width": 2,
+        "height": 4,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Charge power limit",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "W",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#0040ff",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "12000",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 1030,
+        "y": 1120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "62d2bcbc5197cc8f",
+        "type": "ui-button",
+        "z": "7e000ad6f12ce22c",
+        "g": "bfd7b7033d65b775",
+        "group": "fb4bf6bf86c88870",
+        "name": "State OFF Request",
+        "label": "STANDBY REQUEST",
+        "order": 2,
+        "width": 6,
+        "height": 2,
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "1",
+        "payloadType": "num",
+        "topic": "state_request",
+        "topicType": "str",
+        "buttonColor": "red",
+        "textColor": "white",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 790,
+        "y": 1360,
+        "wires": [
+            [
+                "5c45b642eef8ee98"
+            ]
+        ]
+    },
+    {
+        "id": "d59c1de8ea2243a3",
+        "type": "ui-gauge",
+        "z": "7e000ad6f12ce22c",
+        "g": "eecc517b3884a29f",
+        "name": "MPCU_error",
+        "group": "60da1b66bf91580b",
+        "order": 3,
+        "value": "msg.payload.AMS_Error.ErrorCode + 1",
+        "valueType": "jsonata",
+        "width": 2,
+        "height": 2,
+        "gtype": "gauge-tile",
+        "gstyle": "needle",
+        "title": "Last MPCU Error",
+        "alwaysShowTitle": true,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "NO ERROR",
+                "textType": "str"
+            },
+            {
+                "from": "1",
+                "color": "#ea5353",
+                "text": "OVERVOLTAGE",
+                "textType": "str"
+            },
+            {
+                "from": "2",
+                "color": "#ea5353",
+                "text": "UNDERVOLTAGE",
+                "textType": "str"
+            },
+            {
+                "from": "3",
+                "color": "#ea5353",
+                "text": "OVERTEMPERATURE",
+                "textType": "str"
+            },
+            {
+                "from": "4",
+                "color": "#ea5353",
+                "text": "TEMP OPENWIRE",
+                "textType": "str"
+            },
+            {
+                "from": "5",
+                "color": "#ea5353",
+                "text": "CELL OPENWIRE",
+                "textType": "str"
+            },
+            {
+                "from": "6",
+                "color": "#ea5353",
+                "text": "VOLTAGE DIFFERENCE",
+                "textType": "str"
+            },
+            {
+                "from": "7",
+                "color": "#ea5353",
+                "text": "OVERTIME",
+                "textType": "str"
+            },
+            {
+                "from": "8",
+                "color": "#ea5353",
+                "text": "RELAY STUCK",
+                "textType": "str"
+            },
+            {
+                "from": "9",
+                "color": "#ea5353",
+                "text": "ISA OVERHEAT",
+                "textType": "str"
+            },
+            {
+                "from": "10",
+                "color": "#ea5353",
+                "text": "OVERCHARGE",
+                "textType": "str"
+            },
+            {
+                "from": "11",
+                "color": "#ea5353",
+                "text": "OVERDISCHARGE",
+                "textType": "str"
+            },
+            {
+                "from": "12",
+                "color": "#ea5353",
+                "text": "HARDWARE FAILURE",
+                "textType": "str"
+            },
+            {
+                "from": "13",
+                "color": "#ea5353",
+                "text": "PRECHARGE TIMEOUT",
+                "textType": "str"
+            },
+            {
+                "from": "14",
+                "color": "#ea5353",
+                "text": "ISA TIMEOUT",
+                "textType": "str"
+            },
+            {
+                "from": "15",
+                "color": "#ea5353",
+                "text": "MPCU TIMEOUT",
+                "textType": "str"
+            },
+            {
+                "from": "16",
+                "color": "#ea5353",
+                "text": "HV ON",
+                "textType": "str"
+            },
+            {
+                "from": "17",
+                "color": "#ea5353",
+                "text": "LEAK",
+                "textType": "str"
+            },
+            {
+                "from": "18",
+                "color": "#ea5353",
+                "text": "AIR OPENED",
+                "textType": "str"
+            }
+        ],
+        "min": 0,
+        "max": "18",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 1890,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e6f10f45c66d29c8",
+        "type": "ui-button",
+        "z": "7e000ad6f12ce22c",
+        "g": "eecc517b3884a29f",
+        "group": "60da1b66bf91580b",
+        "name": "",
+        "label": "Reset error and warning",
+        "order": 4,
+        "width": 1,
+        "height": 2,
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "{\"AMS_Error\":{\"ErrorCode\":-1},\"AMS_Warning\":{\"WarningCode\":-1}}",
+        "payloadType": "json",
+        "topic": "tserrorwarningreset",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1490,
+        "y": 720,
+        "wires": [
+            [
+                "d59c1de8ea2243a3",
+                "9fa53ce9a21255c5"
+            ]
+        ]
+    },
+    {
+        "id": "9fa53ce9a21255c5",
+        "type": "ui-gauge",
+        "z": "7e000ad6f12ce22c",
+        "g": "eecc517b3884a29f",
+        "name": "MPCU_warning",
+        "group": "60da1b66bf91580b",
+        "order": 5,
+        "value": "msg.payload.AMS_Warning.WarningCode + 1",
+        "valueType": "jsonata",
+        "width": 2,
+        "height": 2,
+        "gtype": "gauge-tile",
+        "gstyle": "needle",
+        "title": "Last MPCU Warning",
+        "alwaysShowTitle": true,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "NO WARNING",
+                "textType": "str"
+            },
+            {
+                "from": "1",
+                "color": "#ffc800",
+                "text": "OVERVOLTAGE",
+                "textType": "str"
+            },
+            {
+                "from": "2",
+                "color": "#ffc800",
+                "text": "UNDERVOLTAGE",
+                "textType": "str"
+            },
+            {
+                "from": "3",
+                "color": "#ffc800",
+                "text": "OVERTEMPERATURE",
+                "textType": "str"
+            },
+            {
+                "from": "4",
+                "color": "#ffc800",
+                "text": "TEMP OPENWIRE",
+                "textType": "str"
+            },
+            {
+                "from": "5",
+                "color": "#ffc800",
+                "text": "CELL OPENWIRE",
+                "textType": "str"
+            },
+            {
+                "from": "6",
+                "color": "#ffc800",
+                "text": "VOLTAGE DIFFERENCE",
+                "textType": "str"
+            },
+            {
+                "from": "7",
+                "color": "#ffc800",
+                "text": "STATE CONTROL",
+                "textType": "str"
+            },
+            {
+                "from": "8",
+                "color": "#ffc800",
+                "text": "STARTUP",
+                "textType": "str"
+            },
+            {
+                "from": "9",
+                "color": "#ffc800",
+                "text": "SDC OPENED",
+                "textType": "str"
+            },
+            {
+                "from": "10",
+                "color": "#ffc800",
+                "text": "RELAY STUCK DURING ERROR",
+                "textType": "str"
+            },
+            {
+                "from": "11",
+                "color": "#ffc800",
+                "text": "OVERCHARGE",
+                "textType": "str"
+            },
+            {
+                "from": "12",
+                "color": "#ffc800",
+                "text": "OVERDISCHARGE",
+                "textType": "str"
+            },
+            {
+                "from": "13",
+                "color": "#ffc800",
+                "text": "HV ON",
+                "textType": "str"
+            },
+            {
+                "from": "14",
+                "color": "#ffc800",
+                "text": "BENDER",
+                "textType": "str"
+            }
+        ],
+        "min": 0,
+        "max": "14",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 1900,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5c45b642eef8ee98",
+        "type": "change",
+        "z": "7e000ad6f12ce22c",
+        "g": "bfd7b7033d65b775",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "send.MPCU_StateRequestReq.State",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1110,
+        "y": 1360,
+        "wires": [
+            [
+                "4d1f5fc472a1f43f"
+            ]
+        ]
+    },
+    {
+        "id": "4d1f5fc472a1f43f",
+        "type": "link out",
+        "z": "7e000ad6f12ce22c",
+        "g": "bfd7b7033d65b775",
+        "name": "link out 2",
+        "mode": "link",
+        "links": [
+            "a340626bd648322b"
+        ],
+        "x": 1345,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "b00a3ea4eaeeb7a6",
+        "type": "ui-gauge",
+        "z": "7e000ad6f12ce22c",
+        "g": "eecc517b3884a29f",
+        "name": "Vehicle state",
+        "group": "60da1b66bf91580b",
+        "order": 2,
+        "value": "msg.payload.MPCU_VehicleState.VehicleState",
+        "valueType": "jsonata",
+        "width": 5,
+        "height": 3,
+        "gtype": "gauge-tile",
+        "gstyle": "needle",
+        "title": "Vehicle State",
+        "alwaysShowTitle": true,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#ffc800",
+                "text": "STARTUP",
+                "textType": "str"
+            },
+            {
+                "from": "1",
+                "color": "#6fff52",
+                "text": "STANDBY",
+                "textType": "str"
+            },
+            {
+                "from": "2",
+                "color": "#00d5ff",
+                "text": "TSON",
+                "textType": "str"
+            },
+            {
+                "from": "3",
+                "color": "#00d5ff",
+                "text": "R2D",
+                "textType": "str"
+            },
+            {
+                "from": "4",
+                "color": "#ff0000",
+                "text": "ERROR",
+                "textType": "str"
+            }
+        ],
+        "min": 0,
+        "max": 10,
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 1470,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4ef25351ac5f9eaa",
+        "type": "ui-gauge",
+        "z": "7e000ad6f12ce22c",
+        "g": "eecc517b3884a29f",
+        "name": "SDC_voltage",
+        "group": "43b1e779af6b2266",
+        "order": 7,
+        "value": "msg.payload.AMS_Stat.KsVoltage",
+        "valueType": "jsonata",
+        "width": 1,
+        "height": 4,
+        "gtype": "gauge-half",
+        "gstyle": "rounded",
+        "title": "SDC_voltage",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "V",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "10",
+                "color": "#00ff00",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "15",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": "0",
+        "max": "18",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 1470,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5f668bcca367a1fe",
+        "type": "ui-gauge",
+        "z": "7e000ad6f12ce22c",
+        "g": "eecc517b3884a29f",
+        "name": "Power limiter",
+        "group": "60da1b66bf91580b",
+        "order": 6,
+        "value": "msg.payload.MPCU_Settings.PowerLimiter",
+        "valueType": "jsonata",
+        "width": 3,
+        "height": 6,
+        "gtype": "gauge-half",
+        "gstyle": "rounded",
+        "title": "Power Limiter",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "W",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "50001",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "70001",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "80000",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 1470,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bcc8c33b2267aa42",
+        "type": "ui-gauge",
+        "z": "7e000ad6f12ce22c",
+        "g": "eecc517b3884a29f",
+        "name": "Max Motor RPM",
+        "group": "60da1b66bf91580b",
+        "order": 7,
+        "value": "msg.payload.MPCU_Settings.MaxMotorRpm",
+        "valueType": "jsonata",
+        "width": 3,
+        "height": 6,
+        "gtype": "gauge-half",
+        "gstyle": "rounded",
+        "title": "Max Motor RPM",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "RPM",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "4000",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "5000",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "5500",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 1480,
+        "y": 600,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "c449922502408448",
@@ -3933,7 +6327,7 @@
         "height": 4,
         "gtype": "gauge-half",
         "gstyle": "needle",
-        "title": "Discharge power limit",
+        "title": "Charge power limit",
         "alwaysShowTitle": false,
         "floatingTitlePosition": "top-left",
         "units": "W",
@@ -5527,26 +7921,32 @@
         "suffix": "",
         "segments": [
             {
-                "from": "0",
+                "from": "300",
                 "color": "#ea5353",
                 "text": "",
                 "textType": "label"
             },
             {
-                "from": "10",
+                "from": "360",
                 "color": "#ffc800",
                 "text": "",
                 "textType": "label"
             },
             {
-                "from": "11",
+                "from": "390",
                 "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "463",
+                "color": "#ea5353",
                 "text": "",
                 "textType": "label"
             }
         ],
-        "min": 0,
-        "max": "15",
+        "min": "300",
+        "max": "500",
         "sizeThickness": 16,
         "sizeGap": 4,
         "sizeKeyThickness": 8,
@@ -12648,7 +15048,8 @@
             "08c4fabbcdcd9b7c",
             "28f1a4d2ab466f9a",
             "ba3e45f4de61def7",
-            "b03d730786d02fd8"
+            "b03d730786d02fd8",
+            "4d1f5fc472a1f43f"
         ],
         "x": 195,
         "y": 420,
@@ -13207,7 +15608,8 @@
                 "b02cb11c40a2e1e6",
                 "a902f843731eba09",
                 "f71bcee8144e7a94",
-                "93a47c3b064a5416"
+                "93a47c3b064a5416",
+                "42c18733e7124eb5"
             ]
         ]
     },
@@ -13357,7 +15759,9 @@
         "x": 1930,
         "y": 360,
         "wires": [
-            []
+            [
+                "a9aaadc8903a28b3"
+            ]
         ]
     },
     {
@@ -13460,10 +15864,85 @@
         "links": [
             "aec9dfb40b17028d",
             "b43f8d1025c753e6",
-            "690785e32328d5ad"
+            "690785e32328d5ad",
+            "db7ef6a4d5e979d5"
         ],
         "x": 1115,
         "y": 560,
+        "wires": []
+    },
+    {
+        "id": "a9aaadc8903a28b3",
+        "type": "ui-gauge",
+        "z": "4197684541243468",
+        "g": "8901499b8bee14b8",
+        "name": "",
+        "group": "ba819955890d188d",
+        "order": 1,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 1,
+        "gtype": "gauge-tile",
+        "gstyle": "needle",
+        "title": "Connection status",
+        "alwaysShowTitle": true,
+        "floatingTitlePosition": "top-left",
+        "units": "",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#ea5353",
+                "text": "Disconnected",
+                "textType": "str"
+            },
+            {
+                "from": "1",
+                "color": "#5cd65c",
+                "text": "Connected",
+                "textType": "str"
+            }
+        ],
+        "min": 0,
+        "max": 10,
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 1930,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "42c18733e7124eb5",
+        "type": "ui-text",
+        "z": "4197684541243468",
+        "g": "8901499b8bee14b8",
+        "group": "ba819955890d188d",
+        "order": 2,
+        "width": "1",
+        "height": "1",
+        "name": "FromIp",
+        "label": "Receiving from: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "ip",
+        "valueType": "msg",
+        "x": 1600,
+        "y": 540,
         "wires": []
     },
     {
@@ -14541,5 +17020,15 @@
                 "2ceae3cf2224f85d"
             ]
         ]
+    },
+    {
+        "id": "0bff026f091691ec",
+        "type": "ui-spacer",
+        "group": "43b1e779af6b2266",
+        "name": "spacer",
+        "order": 11,
+        "width": 1,
+        "height": 1,
+        "className": ""
     }
 ]
