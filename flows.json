@@ -858,8 +858,8 @@
             "4ce832cc5e27a6b6",
             "bfe04f05d0cc2c45"
         ],
-        "x": 1574,
-        "y": 999,
+        "x": 594,
+        "y": 1399,
         "w": 252,
         "h": 342
     },
@@ -885,9 +885,9 @@
             "d59c1de8ea2243a3",
             "9fa53ce9a21255c5"
         ],
-        "x": 1354,
-        "y": 439,
-        "w": 652,
+        "x": 594,
+        "y": 579,
+        "w": 512,
         "h": 342
     },
     {
@@ -915,11 +915,12 @@
             "147410c563eec0c2",
             "62d2bcbc5197cc8f",
             "5c45b642eef8ee98",
-            "4d1f5fc472a1f43f"
+            "4d1f5fc472a1f43f",
+            "e8c6323710c00a32"
         ],
-        "x": 674,
-        "y": 959,
-        "w": 712,
+        "x": 594,
+        "y": 939,
+        "w": 672,
         "h": 442
     },
     {
@@ -946,10 +947,10 @@
             "5617430bb17a65dc",
             "d95b234aef3fe611"
         ],
-        "x": 554,
-        "y": 319,
-        "w": 632,
-        "h": 482
+        "x": 594,
+        "y": 139,
+        "w": 472,
+        "h": 422
     },
     {
         "id": "a1947a9da86cce22",
@@ -2104,6 +2105,16 @@
         "groupType": "default"
     },
     {
+        "id": "0bff026f091691ec",
+        "type": "ui-spacer",
+        "group": "43b1e779af6b2266",
+        "name": "spacer",
+        "order": 11,
+        "width": 1,
+        "height": 1,
+        "className": ""
+    },
+    {
         "id": "db7ef6a4d5e979d5",
         "type": "link in",
         "z": "7e000ad6f12ce22c",
@@ -2124,7 +2135,7 @@
         "type": "function",
         "z": "7e000ad6f12ce22c",
         "name": "Fan-out Overview",
-        "func": "// ===================== Fan-out Overview — On Message =====================\n// false: msg.payload = { Msg: { Signal: value } }  -> gauges copied from other pages\n//        keep their expressions (msg.payload.AMS_Stat.SumVoltage) unchanged.\n// true:  msg.payload = value                       -> widgets use \"msg.payload\".\n// Derived values (overall_reduction, Steering angle) are ALWAYS sent flat:\n// those two widgets must use \"msg.payload\".\nconst FLAT = false;\n\nconst OUT = [\n    // --- TSAC group ---\n    \"AMS_Stat.SumVoltage\",                    // 1  sum_cell_voltage\n    \"AMS_Stat.UnbalancedRate\",                // 2  unbalanced rate\n    \"AMS_Stat.Soc\",                           // 3  battery SOC\n    {\n        derived: \"OverallReduction\",            // 4  overall_reduction: worst of the three rates\n        deps: [\"AMS_Stat.ThermalReductionRate\", \"AMS_Stat.VoltageReductionRate\",\n            \"AMS_Stat.UnbalancedReductionRate\"],\n        fn: g => Math.min(g(\"AMS_Stat.ThermalReductionRate\"),\n            g(\"AMS_Stat.VoltageReductionRate\"),\n            g(\"AMS_Stat.UnbalancedReductionRate\"))\n    },\n    \"AMS_Stat.TsState\",                       // 5  ts_state\n    \"AMS_Stat.BenderState\",                   // 6  bender_state\n    \"AMS_Error.ErrorCode\",                    // 7  ts_error      (-1 = no error)\n    \"AMS_Warning.WarningCode\",                // 8  ts_warning    (-1 = no warning)\n\n    // --- MPCU group ---\n    \"MPCU_VehicleState.VehicleState\",         // 9  Vehicle state\n    \"MPCU_Settings.PowerLimiter\",             // 10 Power limiter\n    \"MPCU_Settings.MaxMotorRpm\",              // 11 Max Motor RPM\n    \"AMS_Stat.KsVoltage\",                     // 12 SDC_voltage\n    \"MPCU_Error.ErrorCode\",                   // 13 MPCU_error     <- check this name\n    \"MPCU_Warning.WarningCode\",               // 14 MPCU_warning\n\n    // --- Tractive system group ---\n    \"AMS_Stat.IsaPower\",                      // 15 isa_power\n    \"MPCU_Values.BusVoltage\",                 // 16 HV Voltage-Inv\n    \"AMS_AvailableCurrent.MaxDischargePower\", // 17 discharge_power_limit\n    \"AMS_AvailableCurrent.MaxChargePower\",    // 18 charge_power_limit\n    \"MPCU_Values.SpeedKmph\",                  // 19 Speed\n    \"APPS_NormalData.AppsData\",               // 20 -> \"set msg.payload\" change node -> APPS\n    \"RSU_Bps.Pressure\",                       // 21 Brake Pressure\n    {\n        derived: \"SteeringDeg\",                 // 22 Steering angle, scaled like the range node\n        deps: [\"FSU_Data.SteeringAngle\"],\n        fn: g => Math.round((g(\"FSU_Data.SteeringAngle\") - 420) / (1670 - 420) * 180 - 90)\n    },\n\n    // --- Cooling / temperature group ---\n    \"MPCU_Values.Fan1Speed\",                  // 23 FAN M1\n    \"MPCU_Values.Fan3Speed\",                  // 24 FAN I\n    \"MPCU_Values.MotorPumpSpeed\",             // 25 PUMP M\n    \"MPCU_Values.InverterPumpSpeed\",          // 26 PUMP I\n    \"AMS_Stat.MaxTemp\",                       // 27 max_cell_temp\n    \"MPCU_Values.InverterTemperature\",        // 28 Inverter Temperature\n    \"MPCU_Values.MotorTemperature\",           // 29 Motor Temperature\n];\n\n// ------------------------------------------------------------------------\nconst b = msg.payload || {};\n\n// derived values need the last-known value of every input, not only the changed ones\nconst last = context.get(\"last\") || {};\nObject.assign(last, b);\ncontext.set(\"last\", last);\nconst g = p => last[p];\n\nconst prev = context.get(\"prevDerived\") || {};\n\nfunction make(topic, value, flat) {\n    let payload = value;\n    if (!flat && !FLAT && topic.includes(\".\")) {\n        const [m, sig] = topic.split(\".\");\n        payload = { [m]: { [sig]: value } };\n    }\n    return { topic, payload, timestamp: msg.timestamp };\n}\n\nconst out = OUT.map(e => {\n    if (typeof e === \"string\") {\n        return (e in b) ? make(e, b[e]) : null;\n    }\n    if (!e.deps.some(d => d in b)) return null;                  // no input changed\n    if (e.deps.some(d => typeof g(d) !== \"number\")) return null; // an input never arrived\n    const v = e.fn(g);\n    if (!Number.isFinite(v) || v === prev[e.derived]) return null;\n    prev[e.derived] = v;\n    return make(e.derived, v, true);                             // derived: always flat\n});\n\ncontext.set(\"prevDerived\", prev);\nreturn out;",
+        "func": "// ===================== Fan-out Overview — On Message =====================\n// false: msg.payload = { Msg: { Signal: value } }  -> gauges copied from other pages\n//        keep their expressions (msg.payload.AMS_Stat.SumVoltage) unchanged.\n// true:  msg.payload = value                       -> widgets use \"msg.payload\".\n// Derived values (overall_reduction, Steering angle) are ALWAYS sent flat:\n// those two widgets must use \"msg.payload\".\nconst FLAT = false;\n\nconst OUT = [\n    // --- TSAC group ---\n    \"AMS_Stat.SumVoltage\",                    // 1  sum_cell_voltage\n    \"AMS_Stat.UnbalancedRate\",                // 2  unbalanced rate\n    \"AMS_Stat.Soc\",                           // 3  battery SOC\n    {\n        derived: \"OverallReduction\",            // 4  overall_reduction: worst of the three rates\n        deps: [\"AMS_Stat.ThermalReductionRate\", \"AMS_Stat.VoltageReductionRate\",\n            \"AMS_Stat.UnbalancedReductionRate\"],\n        fn: g => Math.min(g(\"AMS_Stat.ThermalReductionRate\"),\n            g(\"AMS_Stat.VoltageReductionRate\"),\n            g(\"AMS_Stat.UnbalancedReductionRate\"))\n    },\n    \"AMS_Stat.TsState\",                       // 5  ts_state\n    \"AMS_Stat.BenderState\",                   // 6  bender_state\n    \"AMS_Error.ErrorCode\",                    // 7  ts_error      (-1 = no error)\n    \"AMS_Warning.WarningCode\",                // 8  ts_warning    (-1 = no warning)\n\n    // --- MPCU group ---\n    \"MPCU_VehicleState.VehicleState\",         // 9  Vehicle state\n    \"MPCU_Settings.PowerLimiter\",             // 10 Power limiter\n    \"MPCU_Settings.MaxMotorRpm\",              // 11 Max Motor RPM\n    \"AMS_Stat.KsVoltage\",                     // 12 SDC_voltage\n    \"MPCU_Error.ErrorCode\",                   // 13 MPCU_error     <- check this name\n    \"MPCU_Warning.WarningCode\",               // 14 MPCU_warning\n\n    // --- Tractive system group ---\n    \"AMS_Stat.IsaPower\",                      // 15 isa_power\n    \"MPCU_Values.BusVoltage\",                 // 16 HV Voltage-Inv\n    \"AMS_AvailableCurrent.MaxDischargePower\", // 17 discharge_power_limit\n    \"AMS_AvailableCurrent.MaxChargePower\",    // 18 charge_power_limit\n    \"MPCU_Values.SpeedKmph\",                  // 19 Speed\n    \"APPS_NormalData.AppsData\",               // 20 -> \"set msg.payload\" change node -> APPS\n    \"RSU_Bps.Pressure\",                       // 21 Brake Pressure\n    \"FSU_Data.SteeringAngle\",                 // 22 Steering Angle\n\n    // --- Cooling / temperature group ---\n    \"MPCU_Values.Fan1Speed\",                  // 23 FAN M1\n    \"MPCU_Values.Fan3Speed\",                  // 24 FAN I\n    \"MPCU_Values.MotorPumpSpeed\",             // 25 PUMP M\n    \"MPCU_Values.InverterPumpSpeed\",          // 26 PUMP I\n    \"AMS_Stat.MaxTemp\",                       // 27 max_cell_temp\n    \"MPCU_Values.InverterTemperature\",        // 28 Inverter Temperature\n    \"MPCU_Values.MotorTemperature\",           // 29 Motor Temperature\n];\n\n// ------------------------------------------------------------------------\nconst b = msg.payload || {};\n\n// derived values need the last-known value of every input, not only the changed ones\nconst last = context.get(\"last\") || {};\nObject.assign(last, b);\ncontext.set(\"last\", last);\nconst g = p => last[p];\n\nconst prev = context.get(\"prevDerived\") || {};\n\nfunction make(topic, value, flat) {\n    let payload = value;\n    if (!flat && !FLAT && topic.includes(\".\")) {\n        const [m, sig] = topic.split(\".\");\n        payload = { [m]: { [sig]: value } };\n    }\n    return { topic, payload, timestamp: msg.timestamp };\n}\n\nconst out = OUT.map(e => {\n    if (typeof e === \"string\") {\n        return (e in b) ? make(e, b[e]) : null;\n    }\n    if (!e.deps.some(d => d in b)) return null;                  // no input changed\n    if (e.deps.some(d => typeof g(d) !== \"number\")) return null; // an input never arrived\n    const v = e.fn(g);\n    if (!Number.isFinite(v) || v === prev[e.derived]) return null;\n    prev[e.derived] = v;\n    return make(e.derived, v, true);                             // derived: always flat\n});\n\ncontext.set(\"prevDerived\", prev);\nreturn out;",
         "outputs": 29,
         "timeout": 0,
         "noerr": 0,
@@ -2134,35 +2145,93 @@
         "x": 270,
         "y": 740,
         "wires": [
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            []
+            [
+                "3c6e149892e3cc22"
+            ],
+            [
+                "e1ce923696a40ee3"
+            ],
+            [
+                "71b6a52e75a3b6fa"
+            ],
+            [
+                "23c9e5c85b6c6c8f"
+            ],
+            [
+                "a88a7a6690f04795"
+            ],
+            [
+                "45c1a8c5cc15f0e4"
+            ],
+            [
+                "5617430bb17a65dc"
+            ],
+            [
+                "d95b234aef3fe611"
+            ],
+            [
+                "b00a3ea4eaeeb7a6"
+            ],
+            [
+                "5f668bcca367a1fe"
+            ],
+            [
+                "bcc8c33b2267aa42"
+            ],
+            [
+                "4ef25351ac5f9eaa"
+            ],
+            [
+                "d59c1de8ea2243a3"
+            ],
+            [
+                "9fa53ce9a21255c5"
+            ],
+            [
+                "2f81e1436fa34e1e"
+            ],
+            [
+                "069ca89a30ce3b23"
+            ],
+            [
+                "c4bea10abea424dd"
+            ],
+            [
+                "147410c563eec0c2"
+            ],
+            [
+                "b197bd0619dd0857"
+            ],
+            [
+                "8e5e49c5b7cd1fcb"
+            ],
+            [
+                "f4f3dfdd641b01a3"
+            ],
+            [
+                "e8c6323710c00a32"
+            ],
+            [
+                "aa24709efa142dcd"
+            ],
+            [
+                "18233a0c255003c8"
+            ],
+            [
+                "3b7bca7599bafb24"
+            ],
+            [
+                "b0417e8f294f9ad7"
+            ],
+            [
+                "ad373fa587728bbe"
+            ],
+            [
+                "4ce832cc5e27a6b6"
+            ],
+            [
+                "bfe04f05d0cc2c45"
+            ]
         ],
         "outputLabels": [
             "AMS_Stat.MinTemp",
@@ -2245,8 +2314,8 @@
         "styleRounded": true,
         "styleGlow": false,
         "className": "",
-        "x": 1680,
-        "y": 1220,
+        "x": 700,
+        "y": 1620,
         "wires": [
             []
         ]
@@ -2300,8 +2369,8 @@
         "styleRounded": true,
         "styleGlow": false,
         "className": "",
-        "x": 730,
-        "y": 440,
+        "x": 690,
+        "y": 260,
         "wires": [
             []
         ]
@@ -2355,8 +2424,8 @@
         "styleRounded": true,
         "styleGlow": false,
         "className": "",
-        "x": 1010,
-        "y": 1000,
+        "x": 690,
+        "y": 980,
         "wires": [
             []
         ]
@@ -2416,8 +2485,8 @@
         "styleRounded": true,
         "styleGlow": false,
         "className": "",
-        "x": 720,
-        "y": 600,
+        "x": 680,
+        "y": 420,
         "wires": [
             []
         ]
@@ -2495,8 +2564,8 @@
         "styleRounded": true,
         "styleGlow": false,
         "className": "",
-        "x": 730,
-        "y": 640,
+        "x": 690,
+        "y": 460,
         "wires": [
             []
         ]
@@ -2550,8 +2619,8 @@
         "styleRounded": true,
         "styleGlow": false,
         "className": "",
-        "x": 740,
-        "y": 400,
+        "x": 700,
+        "y": 220,
         "wires": [
             []
         ]
@@ -2611,8 +2680,8 @@
         "styleRounded": true,
         "styleGlow": false,
         "className": "",
-        "x": 750,
-        "y": 360,
+        "x": 710,
+        "y": 180,
         "wires": [
             []
         ]
@@ -2624,7 +2693,7 @@
         "g": "bfd7b7033d65b775",
         "name": "discharge_power_limit",
         "group": "fb4bf6bf86c88870",
-        "order": 9,
+        "order": 7,
         "value": "msg.payload.AMS_AvailableCurrent.MaxDischargePower",
         "valueType": "jsonata",
         "width": 2,
@@ -2654,8 +2723,8 @@
         "styleRounded": true,
         "styleGlow": false,
         "className": "",
-        "x": 1040,
-        "y": 1080,
+        "x": 720,
+        "y": 1060,
         "wires": [
             []
         ]
@@ -2709,8 +2778,8 @@
         "styleRounded": true,
         "styleGlow": false,
         "className": "",
-        "x": 1660,
-        "y": 1040,
+        "x": 680,
+        "y": 1440,
         "wires": [
             []
         ]
@@ -2764,8 +2833,8 @@
         "styleRounded": true,
         "styleGlow": false,
         "className": "",
-        "x": 1650,
-        "y": 1080,
+        "x": 670,
+        "y": 1480,
         "wires": [
             []
         ]
@@ -2813,8 +2882,8 @@
         "styleRounded": true,
         "styleGlow": false,
         "className": "",
-        "x": 1660,
-        "y": 1120,
+        "x": 680,
+        "y": 1520,
         "wires": [
             []
         ]
@@ -2862,8 +2931,8 @@
         "styleRounded": true,
         "styleGlow": false,
         "className": "",
-        "x": 1660,
-        "y": 1160,
+        "x": 680,
+        "y": 1560,
         "wires": [
             []
         ]
@@ -2917,8 +2986,8 @@
         "styleRounded": true,
         "styleGlow": false,
         "className": "",
-        "x": 1700,
-        "y": 1260,
+        "x": 720,
+        "y": 1660,
         "wires": [
             []
         ]
@@ -2972,8 +3041,8 @@
         "styleRounded": true,
         "styleGlow": false,
         "className": "",
-        "x": 1690,
-        "y": 1300,
+        "x": 710,
+        "y": 1700,
         "wires": [
             []
         ]
@@ -3027,8 +3096,8 @@
         "styleRounded": true,
         "styleGlow": false,
         "className": "",
-        "x": 990,
-        "y": 1180,
+        "x": 670,
+        "y": 1160,
         "wires": [
             []
         ]
@@ -3088,8 +3157,8 @@
         "styleRounded": true,
         "styleGlow": false,
         "className": "",
-        "x": 1020,
-        "y": 1040,
+        "x": 700,
+        "y": 1020,
         "wires": [
             []
         ]
@@ -3137,8 +3206,8 @@
         "styleRounded": true,
         "styleGlow": false,
         "className": "",
-        "x": 750,
-        "y": 520,
+        "x": 710,
+        "y": 340,
         "wires": [
             []
         ]
@@ -3163,8 +3232,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 860,
-        "y": 1220,
+        "x": 700,
+        "y": 1200,
         "wires": [
             [
                 "1871e3e1b4255db7"
@@ -3184,8 +3253,8 @@
         "height": 2,
         "color": "red",
         "className": "",
-        "x": 1070,
-        "y": 1220,
+        "x": 910,
+        "y": 1200,
         "wires": []
     },
     {
@@ -3237,8 +3306,8 @@
         "styleRounded": true,
         "styleGlow": false,
         "className": "",
-        "x": 1060,
-        "y": 1260,
+        "x": 700,
+        "y": 1240,
         "wires": [
             []
         ]
@@ -3280,8 +3349,8 @@
         "styleRounded": true,
         "styleGlow": false,
         "className": "",
-        "x": 1060,
-        "y": 1300,
+        "x": 860,
+        "y": 1280,
         "wires": [
             []
         ]
@@ -3431,8 +3500,8 @@
         "styleRounded": true,
         "styleGlow": false,
         "className": "",
-        "x": 1080,
-        "y": 720,
+        "x": 960,
+        "y": 480,
         "wires": [
             []
         ]
@@ -3469,8 +3538,8 @@
         "enablePointerup": false,
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
-        "x": 690,
-        "y": 740,
+        "x": 730,
+        "y": 500,
         "wires": [
             [
                 "5617430bb17a65dc",
@@ -3599,8 +3668,8 @@
         "styleRounded": true,
         "styleGlow": false,
         "className": "",
-        "x": 1090,
-        "y": 760,
+        "x": 970,
+        "y": 520,
         "wires": [
             []
         ]
@@ -3612,7 +3681,7 @@
         "g": "bfd7b7033d65b775",
         "name": "charge_power_limit",
         "group": "fb4bf6bf86c88870",
-        "order": 7,
+        "order": 9,
         "value": "msg.payload.AMS_AvailableCurrent.MaxChargePower",
         "valueType": "jsonata",
         "width": 2,
@@ -3642,8 +3711,8 @@
         "styleRounded": true,
         "styleGlow": false,
         "className": "",
-        "x": 1030,
-        "y": 1120,
+        "x": 710,
+        "y": 1100,
         "wires": [
             []
         ]
@@ -3680,8 +3749,8 @@
         "enablePointerup": false,
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
-        "x": 790,
-        "y": 1360,
+        "x": 710,
+        "y": 1340,
         "wires": [
             [
                 "5c45b642eef8ee98"
@@ -3833,8 +3902,8 @@
         "styleRounded": true,
         "styleGlow": false,
         "className": "",
-        "x": 1890,
-        "y": 700,
+        "x": 990,
+        "y": 840,
         "wires": [
             []
         ]
@@ -3857,7 +3926,7 @@
         "className": "",
         "icon": "",
         "iconPosition": "left",
-        "payload": "{\"AMS_Error\":{\"ErrorCode\":-1},\"AMS_Warning\":{\"WarningCode\":-1}}",
+        "payload": "{\"AMS_Error\":{\"ErrorCode\":\"No Error\"},\"AMS_Warning\":{\"WarningCode\":\"No Warning\"}}",
         "payloadType": "json",
         "topic": "tserrorwarningreset",
         "topicType": "msg",
@@ -3871,8 +3940,8 @@
         "enablePointerup": false,
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
-        "x": 1490,
-        "y": 720,
+        "x": 730,
+        "y": 860,
         "wires": [
             [
                 "d59c1de8ea2243a3",
@@ -4001,8 +4070,8 @@
         "styleRounded": true,
         "styleGlow": false,
         "className": "",
-        "x": 1900,
-        "y": 740,
+        "x": 1000,
+        "y": 880,
         "wires": [
             []
         ]
@@ -4028,8 +4097,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1110,
-        "y": 1360,
+        "x": 1010,
+        "y": 1340,
         "wires": [
             [
                 "4d1f5fc472a1f43f"
@@ -4046,8 +4115,8 @@
         "links": [
             "a340626bd648322b"
         ],
-        "x": 1345,
-        "y": 1360,
+        "x": 1225,
+        "y": 1340,
         "wires": []
     },
     {
@@ -4111,8 +4180,8 @@
         "styleRounded": true,
         "styleGlow": false,
         "className": "",
-        "x": 1470,
-        "y": 480,
+        "x": 710,
+        "y": 620,
         "wires": [
             []
         ]
@@ -4166,8 +4235,8 @@
         "styleRounded": true,
         "styleGlow": false,
         "className": "",
-        "x": 1470,
-        "y": 640,
+        "x": 710,
+        "y": 740,
         "wires": [
             []
         ]
@@ -4221,8 +4290,8 @@
         "styleRounded": true,
         "styleGlow": false,
         "className": "",
-        "x": 1470,
-        "y": 520,
+        "x": 710,
+        "y": 660,
         "wires": [
             []
         ]
@@ -4276,10 +4345,31 @@
         "styleRounded": true,
         "styleGlow": false,
         "className": "",
-        "x": 1480,
-        "y": 600,
+        "x": 720,
+        "y": 700,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "e8c6323710c00a32",
+        "type": "range",
+        "z": "7e000ad6f12ce22c",
+        "g": "bfd7b7033d65b775",
+        "minin": "420",
+        "maxin": "1670",
+        "minout": "-90",
+        "maxout": "90",
+        "action": "scale",
+        "round": false,
+        "property": "payload.FSU_Data.SteeringAngle",
+        "name": "",
+        "x": 680,
+        "y": 1280,
+        "wires": [
+            [
+                "155ae2b57fc7548f"
+            ]
         ]
     },
     {
@@ -17020,15 +17110,5 @@
                 "2ceae3cf2224f85d"
             ]
         ]
-    },
-    {
-        "id": "0bff026f091691ec",
-        "type": "ui-spacer",
-        "group": "43b1e779af6b2266",
-        "name": "spacer",
-        "order": 11,
-        "width": 1,
-        "height": 1,
-        "className": ""
     }
 ]
